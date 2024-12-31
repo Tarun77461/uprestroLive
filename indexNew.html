@@ -4,10 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Uprestro POS</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
 
     <link
       rel="shortcut icon"
@@ -35,135 +31,12 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="assets/css/responsive.css" />
-
-    <style>
-      .BookYourFreeDmo {
-        margin-top: 3rem;
-        p {
-          font-size: 18px;
-        }
-        a {
-          margin-top: 1rem;
-        }
-      }
-      .benefitsSection {
-        padding: 5rem;
-        background: linear-gradient(to bottom, var(--brand), var(--brandDark));
-
-        h2 {
-          color: white;
-        }
-
-        p {
-          color: white;
-        }
-        a {
-          margin-top: 0.5rem;
-          border: 2px solid white;
-          color: white;
-          font-size: 18px;
-          &:hover {
-            background-color: white;
-            color: var(--brand);
-          }
-        }
-
-        h4 {
-          font-size: 22px;
-          font-weight: 400;
-          color: white;
-          margin-top: 3rem;
-          margin-bottom: 1rem;
-        }
-
-        .leftSideBenifit,
-        .rightSideBenifitDiv {
-          display: flex;
-          flex-direction: column;
-
-          height: 100%;
-          width: 100%;
-          border-radius: 12px;
-          border: 1px solid #c3c0c01b;
-          padding: 2rem;
-          box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
-            0 8px 10px -6px rgb(0 0 0 / 0.1);
-          background: linear-gradient(
-            to bottom,
-            var(--brand),
-            var(--brandDark)
-          );
-
-          h6 {
-            font-size: 36px;
-            color: white;
-          }
-
-          p {
-            font-size: 17px;
-          }
-        }
-
-        .data1,
-        .data2 {
-          display: flex;
-          justify-content: space-between;
-          flex-wrap: wrap;
-        }
-        .data2 {
-          margin-top: 2rem;
-        }
-      }
-      .rightSideBenifitDiv {
-        gap: 1.5rem;
-        h2 {
-          font-size: 18px;
-          color: white;
-        }
-
-        p {
-          margin-top: 0.5rem;
-          font-size: 16px;
-          color: white;
-        }
-      }
-
-      .benifiticon {
-        background-color: white;
-        border-radius: 50px;
-        height: fit-content;
-        padding: 6px 10px;
-      }
-      @media screen and (max-width: 768px) {
-        .benefitsSection {
-          padding: 2rem 1rem !important;
-        }
-        .leftSideBenifit {
-          padding: 2rem 1rem !important;
-        }
-        .data1,
-        .data2 {
-          justify-content: center !important;
-        }
-      }
-      @media screen and (max-width: 992px) {
-        .benefitsSection {
-          padding: 4rem 1rem !important;
-        }
-      }
-      @media screen and (max-width: 800px) {
-        .data1,
-        .data2 {
-          justify-content: center !important;
-        }
-      }
-    </style>
   </head>
   <body>
     <header class="header-area">
       <nav class="navbar navbar-expand-lg menu_three sticky-nav">
         <div class="container-lg">
-          <a class="navbar-brand header_logo" href="index.html">
+          <a class="navbar-brand header_logo">
             <img
               style="width: 200px"
               class="main_logo"
@@ -198,29 +71,30 @@
           >
             <ul class="navbar-nav menu mx-auto">
               <li class="nav-item active">
-                <a href="#" class="nav-link active">Features</a>
+                <a href="#Features" class="nav-link">Features</a>
               </li>
               <li class="nav-item active">
-                <a href="#" class="nav-link">Pricing</a>
-              </li>
-
-              <li class="nav-item active">
-                <a href="#" class="nav-link">Integrations</a>
+                <a href="#Pricing" class="nav-link">Pricing</a>
               </li>
 
               <li class="nav-item active">
-                <a href="#" class="nav-link">Testimonials</a>
+                <a href="#GetStarted" class="nav-link">Integrations</a>
+              </li>
+
+              <li class="nav-item active">
+                <a href="#Testimonials" class="nav-link">Testimonials</a>
               </li>
             </ul>
             <div class="right-nav">
-              <a class="btn btn-red" href="signup.html">Get Started</a>
+              <a class="btn btn-red"  id="openModalBtn"
+              onclick="toggleModal(true)"  style="cursor: pointer; border: none; ">Get Started</a>
             </div>
           </div>
         </div>
       </nav>
     </header>
 
-    <main>
+    <main class="content">
       <!-- Banner Area -->
       <section class="banner-area">
         <div class="container">
@@ -252,18 +126,18 @@
                   AI-driven insights.
                 </p>
                 <form class="form-group">
-                  <button
-                    type="submit"
-                    style="left: 0; right: auto"
+                  <a    id="openModalBtn"
+                  onclick="toggleModal(true)"
+                    style="left: 0; right: auto ;cursor: pointer; border: none; "
                     class="btn btn-red"
                   >
                     Book A Demo
-                  </button>
+                  </a>
                 </form>
               </div>
             </div>
             <div class="col-md-6">
-              <div class="banner-right">
+              <div class="banner-right heroRighImgg">
                 <img
                   class="wow fadeInRightBig"
                   src="assets/images/uprestro/heroImg.png"
@@ -279,7 +153,7 @@
       <!-- Banner Area -->
 
       <!-- Services Area -->
-      <section class="billing-services-area pb-140">
+      <section class="billing-services-area pb-140" id="Features">
         <div class="container">
           <div class="row">
             <div class="col-lg-12 mb-50">
@@ -403,7 +277,7 @@
       <!-- Services Area -->
 
       <!-- Process Area Two -->
-      <section class="process-area-2 overflow-hidden mb-100">
+      <section class="process-area-2 overflow-hidden mb-100" id="GetStarted">
         <div class="container">
           <div class="row">
             <div class="col-12 mb-90">
@@ -470,10 +344,10 @@
                 </p>
               </div>
             </div>
-            <div class="col-12">
+            <div class="col-12 mt-30">
               <form class="form-group text-center" style="max-width: 100%">
-                <button
-                  type="submit"
+                <a href="#Contact"
+                  type="button"
                   style="
                     position: static;
                     margin-right: 0.5rem;
@@ -483,16 +357,17 @@
                   class="btn btn-red"
                 >
                   Book A Demo
-                </button>
-                <a href="" class="btn">Buy Plan</a>
+                </a>
+                <a href="#Pricing" class="btn">View Pricing</a>
               </form>
             </div>
           </div>
         </div>
       </section>
-      <!-- Process Area Two -->
-      <!---cardss-->
-      <section
+      <!-- Process Area Two --> 
+       <!-- Why Choose Us Area -->
+        
+       <section
         id="benefits"
         class="benefitsSection process-area-2 overflow-hidden mb-100"
       >
@@ -573,20 +448,629 @@
               </div>
             </div>
           </div>
-          <div class="col-12 BookYourFreeDmo">
-            <form class="form-group text-center" style="max-width: 100%">
-              <p>Ready to transform your restaurant?</p>
-              <a href="" class="btn">Book Your Free Demo</a>
-            </form>
+          <div class="mt-30 mb-30" style="font-size: 24px; text-align: center; color:#fff;
+          ">Ready to transform your restaurant?</div>
+          <div class="flex-row " style="text-align: center; margin-top: 15px;">
+            <a href="#Contact" class="btn btn-red" style="margin-right: 0.5rem;">Book A Free Demo</a>
+           </div>
           </div>
         </div>
       </section>
+       <!-- Why Choose Us Area -->
+
+      <section class="app-testimonial-area  pb-105" id="Testimonials">
+        <div class="container">
+          <div class="row">
+            <div class="section-title-center">
+              <h2 class="wow fadeInUp">Success Stories</h2>
+              <p class="wow fadeInUp" data-wow-delay="0.2s">See how restaurants like yours are growing with Uprestro POS</p>
+            </div>
+          </div>
+
+          <div class="app-client-slider">
+            <div class="single-client">
+              <img class="img-fluid rounded-circle" src="./assets/images/home_10/client-1.png" alt="cleint" />
+              <p class="quote">"Uprestro POS has revolutionized our operations. We've seen a 20% increase in revenue and significantly reduced order processing times."</p>
+              <div class="client-info">
+                <div>
+                  <p>Sarah Thompson</p>
+                  <span class="role">Restaurant Owner, The Bistro</span>
+                </div>
+                <div class="rating">
+                  <a href="#"><i class="icon_star"></i></a>
+                  <a href="#"><i class="icon_star"></i></a>
+                  <a href="#"><i class="icon_star"></i></a>
+                  <a href="#"><i class="icon_star"></i></a>
+                  <a href="#"><i class="icon_star"></i></a>
+                </div>
+              </div>
+              <div ></div>
+            </div>
+            <div class="single-client">
+              <img class="img-fluid rounded-circle" src="./assets/images/home_10/client-2.png" alt="cleint" />
+              <p class="quote">"The AI-driven insights have helped us optimize our menu and reduce waste. Customer satisfaction has improved dramatically."</p>
+              <div class="client-info">
+                <div>
+                  <p>Michael Chen</p>
+                  <span class="role">Operations Manager, Asian Fusion</span>
+                </div>
+                <div class="rating">
+                  <a href="#"><i class="icon_star"></i></a>
+                  <a href="#"><i class="icon_star"></i></a>
+                  <a href="#"><i class="icon_star"></i></a>
+                  <a href="#"><i class="icon_star"></i></a>
+                  <a href="#"><i class="icon_star"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="single-client">
+              <img class="img-fluid rounded-circle" src="./assets/images/home_10/client-3.png" alt="cleint" />
+              <p class="quote">"The offline mode has been a lifesaver. We never miss a sale, and the super admin dashboard gives me complete control."</p>
+              <div class="client-info">
+                <div>
+                  <p>David Martinez</p>
+                  <span class="role">Owner, Café Excellence</span>
+                </div>
+                <div class="rating">
+                  <a href="#"><i class="icon_star"></i></a>
+                  <a href="#"><i class="icon_star"></i></a>
+                  <a href="#"><i class="icon_star"></i></a>
+                  <a href="#"><i class="icon_star"></i></a>
+                  <a href="#"><i class="icon_star"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="single-client">
+              <img class="img-fluid rounded-circle" src="./assets/images/home_10/client-1.png" alt="cleint" />
+              <p class="quote">Assertively procrastinate distributed relationships whereas equity invested intellectual capital everything</p>
+              <div class="client-info">
+                <div>
+                  <p>Moshrarf Hossan</p>
+                  <span class="role">Ui / Ux Designer</span>
+                </div>
+                <div class="rating">
+                  <a href="#"><i class="icon_star"></i></a>
+                  <a href="#"><i class="icon_star"></i></a>
+                  <a href="#"><i class="icon_star"></i></a>
+                  <a href="#"><i class="icon_star"></i></a>
+                  <a href="#"><i class="icon_star"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="single-client">
+              <img class="img-fluid rounded-circle" src="./assets/images/home_10/client-2.png" alt="cleint" />
+              <p class="quote">Assertively procrastinate distributed relationships whereas equity invested intellectual capital everything</p>
+              <div class="client-info">
+                <div>
+                  <p>Eh Jewel</p>
+                  <span class="role">Spider Themes,CEO</span>
+                </div>
+                <div class="rating">
+                  <a href="#"><i class="icon_star"></i></a>
+                  <a href="#"><i class="icon_star"></i></a>
+                  <a href="#"><i class="icon_star"></i></a>
+                  <a href="#"><i class="icon_star"></i></a>
+                  <a href="#"><i class="icon_star"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="single-client">
+              <img class="img-fluid rounded-circle" src="./assets/images/home_10/client-3.png" alt="cleint" />
+              <p class="quote">Assertively procrastinate distributed relationships whereas equity invested intellectual capital everything</p>
+              <div class="client-info">
+                <div>
+                  <p>Arif Rahman</p>
+                  <span class="role">Junior web developer</span>
+                </div>
+                <div class="rating">
+                  <a href="#"><i class="icon_star"></i></a>
+                  <a href="#"><i class="icon_star"></i></a>
+                  <a href="#"><i class="icon_star"></i></a>
+                  <a href="#"><i class="icon_star"></i></a>
+                  <a href="#"><i class="icon_star"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+ 
+       
+      <section class="choose-plan-area choose-plan-area-bg2 pt-125 pb-140" id="Pricing">
+        <div class="container">
+          <div class="section-title-center">
+            <h2 class="wow fadeInUp">Simple, Transparent Pricing</h2>
+            <p class="wow fadeInUp" data-wow-delay="0.2s">Affordable plans for restaurants of all sizes</p>
+          </div>
+          <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
+            
+            <div class="tab-content features-tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="nav-monthly2" role="tabpanel" aria-labelledby="nav-monthly-tab2">
+                <div class="row gy-xl-0 gy-4 pricing-item-two-cotnainer">
+                  <div class="col-xl-4 col-md-6">
+                    <div class="pricing-item-2 wow fadeInUp" data-wow-delay="0.1s">
+                      <img src="assets/images/uprestro/person.png" alt="icon" />
+                      <h4>Starter</h4>
+                      <p>Perfect for new restaurants</p>
+                      <div class="price"><span style="text-decoration: line-through; color:#666">₹ 10,000  </span> ₹3,000</div>
+                      <div class="pack-feature">Single location support</div>
+                      <div class="pack-feature" style="margin-top: 10px;">Basic POS features</div>
+                      <div class="pack-feature" style="margin-top: 10px;">Offline mode</div>
+                      <div class="pack-feature" style="margin-top: 10px;">Email support</div>
+                      <a href="" class="btn">Book A Free Demo</a>
+                    </div>
+                  </div>
+                  <div class="col-xl-4 col-md-6">
+                    <div class="pricing-item-2 wow fadeInUp active" data-wow-delay="0.3s">
+                      <img src="assets/images/uprestro/bussiness.png" alt="icon" />
+                      <h4>Growth</h4>
+                      <p>Best Value</p>
+                      <div class="price"><span style="text-decoration: line-through; color:#666">₹ 20,000  </span> ₹10,000</div>
+                      <div class="pack-feature">Everything in Starter</div>
+                      <div class="pack-feature" style="margin-top: 10px;">Up to 3 locations</div>
+                      <div class="pack-feature" style="margin-top: 10px;">AI-driven insights</div>
+                      <div class="pack-feature" style="margin-top: 10px;">Priority support</div>
+                      <div class="pack-feature" style="margin-top: 10px;">Advanced analytics</div>
+                      <a href="" class="btn">Book Free Demo</a>
+                    </div>
+                  </div>
+                  <div class="col-xl-4 col-md-6 mx-auto">
+                    <div class="pricing-item-2 wow fadeInUp" data-wow-delay="0.5s">
+                      <img src="assets/images/uprestro/enterprise.png" alt="icon" />
+                      <h4>Entreprise</h4>
+                      <p>For restaurant chains</p>
+                      <div class="price">Custom</div>
+                      <div class="pack-feature">Everything in Growth</div>
+                      <div class="pack-feature" style="margin-top: 10px;">Unlimited locations</div>
+                      <div class="pack-feature" style="margin-top: 10px;">Custom integrations</div>
+                      <div class="pack-feature" style="margin-top: 10px;">24/7 dedicated support</div>
+                      <a href="" class="btn">Contact Sales</a>
+                    </div>
+                  </div>
+                  <div class="pack-feature" style="margin-top: 10px; text-align: center;">All plans include a 14-day free trial. No credit card required.</div>
+                  <div class="pack-feature" style="margin-top: 15px; text-align: center;">Free setup assistance
+                    <span style="margin-left: 10px;">No hidden fees</span>
+                    <span style="margin-left: 10px;"> Cancel anytime</span></div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> 
+      <!-- FAQs Area -->
+       <section class="faq-area pricing-faq wow fadeInUp animate__fast">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="section-title-center">
+                <h2 class="font-bold mt-n3">Frequently asked questions</h2>
+                <p>Everything you need to know about Uprestro POS.</p>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="accordion" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseOne"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseOne"
+                    >
+                      <span>Q1.</span> How does the offiline mode work?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <p>
+                        Our system automatically syncs data when online and stores all transactions locally when offline. Once internet connection is 
+                        restored, all data is synchronized automatically without any manual intervention.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseTwo"
+                    >
+                      <span>Q2.</span> What type of support do yopu provide?]
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <p>
+                        We offer 24/7 customer support via email and phone. Enterprise customers get dedicated support managers.
+                        All customers receive free setup assistance and training.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseThree"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseThree"
+                    >
+                      <span>Q3.</span> Can i Integerate with my existing system?
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapseThree"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body">
+                      <p>
+                        Yes, we offer various integration options with popular accounting software, delivery platforms, 
+                        and inventory management systems. Custom integrations are available for Enterprise plans.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingFour">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseFour"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseFour"
+                    >
+                      <span>Q4.</span> How secure is my data?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-collapseFour" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <p>
+                        We use industry-standard encryption and security protocols. Your data is backed up regularly and stored in secure cloud servers.
+                         We are compliant with all relevant data protection regulations.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingFive">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseFive"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseFive"
+                    >
+                      <span>Q5.</span> What’s up, Docs?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-collapseFive" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <p>
+                        Follow these 6 steps and you’ll get your Help Scout account up and running in no time. If you'd like to get a full tour of Help Scout
+                        and all its features, attend one of our weekly live demos or take a video tour.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pack-feature" style="margin-top: 15px; text-align: center;">Still have questions? We're here to help!
+        </div>
+        <div class="flex-row " style="text-align: center; margin-top: 15px;">
+          <a    id="openModalBtn"
+          onclick="toggleModal(true)" class="btn btn-red">Contact Support</a>
+          <a href="#" class="btn ">View Documentation</a></div>
+        </div>
+      </section>
+      <!-- FAQs Area -->
+       <!-- Contact Area -->
+      <section class="contact-area" id="Contact">
+        <div class="container">
+          <div class="col-lg-8 offset-lg-2">
+            <div class="section-title text-center mb-20">
+              <h2>
+                Let's Transform Your Restaurant
+              </h2>
+              <p>Book a free demo or get in touch with our sales team</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 col-lg-4">
+              <div class="contact-info">
+                <img src="assets/images/icon/icon-9.svg" alt="" />
+                <h4>5/6 Meera Complex M.P. Nagar Zone-2, Bhopal(M.P.), India</h4>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+              <div class="contact-info">
+                <img src="assets/images/icon/icon-10.svg" alt="" />
+                <h4>
+                    <a href="tel:0755-4902894">0755-4902894</a>
+                    <a href="tel:+91-9425653634">+91-9425653634</a></h4>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mx-auto">
+              <div class="contact-info">
+                <img src="assets/images/icon/icon-11.svg" alt="" />
+                <h4>
+                  <a href="mailto:support@uprestro.com">support@uprestro.com</a>
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="contact-form">
+                <form>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      
+                      <div class="contact-form-select">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" placeholder="Enter Your Name" />
+                      </div>
+                      <div class="contact-form-email">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" placeholder="Enter your email to book demo" />
+                      </div>
+                      <div class="contact-form-name">
+                        <label for="phone">Mobile No.</label>
+                        <input type="text" id="phone" placeholder="+91" />
+                      </div>
+                      <div class="contact-form-name">
+                        <label for="name" class="mt-4">Restaurant Name</label>
+                        <input type="text" id="name" placeholder="Enter your Restaurant Name" />
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="contact-form-message">
+                        <label for="textarea">Message</label>
+                        <textarea id="textarea" placeholder="Type your message...."></textarea>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="contact-form-button">
+                        <a href="#Contact" class="btn btn-red">Book A Demo</a>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Area -->
+    </main>
+
+    <!-- Footer Area -->
+    <footer class="footer-billing bg-black-800">
+      <img src="./assets/images/home_8/shape/footer-shape.svg" alt="Shape" class="shape" />
+      <div class="footer-top pt-125 pb-125">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="footer-widget wow fadeInDown" data-wow-delay="0.1s">
+                <a class="navbar-brand header_logo">
+                    <img
+                      style="max-width: 200px"
+                      class="main_logo"
+                      src="assets/images/uprestro/uprestro_logo.png"
+                      alt="logo"
+                    />
+                  </a>
+                <p class="footer-text">For details about managing Customers and billing accounts using API.</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="footer-widget wow fadeInDown" data-wow-delay="0.3s">
+                <h4 class="widget-title">Company</h4>
+                <ul class="widget-link-list">
+                  <li><a href="#">About us</a></li>
+                  <li><a href="#">Contact us</a></li>
+                  <li><a href="#">Plans</a></li>
+                  <li><a href="#">Security</a></li>
+                  <li><a href="#">Features</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="footer-widget wow fadeInDown" data-wow-delay="0.5s">
+                <h4 class="widget-title">Support</h4>
+                <ul class="widget-link-list">
+                  <li><a href="#">Help center</a></li>
+                  <li><a href="#">Contact us</a></li>
+                  <li><a href="#">Cookies</a></li>
+                  <li><a href="#">Privacy & terms</a></li>
+                  <li><a href="#">Sitemap</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="footer-widget wow fadeInDown" data-wow-delay="0.7s">
+                <h4 class="widget-title">Follow Us</h4>
+                <ul class="widget-social-list">
+                  <li>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-google"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copyright pb-45">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="language-list wow fadeInLeft" data-wow-delay="0.2s">
+                <form>
+                  <i class="fas fa-globe-americas"></i>
+                  <select id="select-lang">
+                    <option value="English">English (United States)</option>
+                    <option value="Bangla">Bangla</option>
+                    <option value="French">French</option>
+                    <option value="Hindi">Hindi</option>
+                  </select>
+                </form>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <p class="copyright-text float-start float-md-end wow fadeInRight" data-wow-delay="0.2s">&copy; 2021 Landpagy. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Area -->
+
+
+      <!------------Fom Modal -------------->
+      <div class="formModal">
+        <div
+          class="modal fade"
+          id="formModal"
+          tabindex="-1"
+          aria-labelledby="formModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="formModalLabel">
+                  Schedule a free Demo
+                </h4>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <!-- Form inside modal -->
+                <form id="userForm">
+
+                  <div class="row">
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Name *</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      maxlength="50"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="email" class="form-label">Email *</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      maxlength="50"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6  mb-3">
+                    <label for="number" class="form-label">Mobile No. *</label>
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="number"
+                      maxlength="10"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="city" class="form-label">Restaurant Name*</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="city"
+                      maxlength="100"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="city" class="form-label">City *</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="city"
+                      maxlength="100"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-center w-100">
+
+                  <button type="submit" class="submitFormBttn">Submit</button>
+
+                </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
     </main>
 
     <!--Scroll to top-->
     <a href="#" class="scrollToTop">
       <img src="assets/images/scroll.svg" alt="" />
     </a>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <script>
+      // Function to toggle modal visibility
+      function toggleModal(show) {
+        const modal = new bootstrap.Modal(document.getElementById("formModal"));
+        if (show) {
+          modal.show();
+          document.body.classList.add("modal-open");
+        } else {
+          modal.hide();
+          document.body.classList.remove("modal-open");
+        }
+      }
+      document
+        .getElementById("userForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          alert("Form Submitted Successfully!");
+          toggleModal(false);
+        });
+
+      document
+        .getElementById("cancelButton")
+        .addEventListener("click", function () {
+          toggleModal(false);
+        });
+    </script>
 
     <script src="assets/js/plugin/jquery-3.5.0.min.js"></script>
     <script src="assets/js/plugin/popper.min.js"></script>
