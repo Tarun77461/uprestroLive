@@ -1,0 +1,1820 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Uprestro POS</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="section-41d74c13-acab-43b3-a488-e80bb96086f5">
+      <div id="root">
+        <section id="navbar_hero" class="relative bg-white">
+          <!-- Navbar -->
+          <nav
+            class="fixed w-full bg-white shadow-sm z-50"
+            x-data="{ mobileMenuOpen: false, featureDropdownOpen: false }"
+            id="el-tjp2pj79"
+          >
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <header
+                class="fixed w-full bg-white shadow-sm z-50"
+                x-data="{ mobileMenuOpen: false, featureDropdownOpen: false }"
+                style="left: 0"
+              >
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                  <div class="flex justify-between h-16">
+                    <!-- Logo -->
+                    <div class="flex-shrink-0 flex items-center">
+                      <a href="/" class="block">
+                        <img
+                          src="https://dms.mydukaan.io/original/webp/media/633b49ea-ff56-44b9-8ee7-cdffaaafa917.png"
+                          alt="Sapreste Logo"
+                          class="h-8 w-auto transition-opacity duration-300 opacity-100"
+                          loading="lazy"
+                        />
+                      </a>
+                    </div>
+
+                    <!-- Desktop Navigation -->
+                    <nav class="hidden md:flex md:items-center md:space-x-8">
+                      <!-- Features Dropdown -->
+                      <div
+                        class="relative"
+                        @mouseenter="featureDropdownOpen = true"
+                        @mouseleave="featureDropdownOpen = false"
+                      >
+                        <button
+                          class="text-gray-700 hover:text-[#2596be] transition duration-300 flex items-center"
+                        >
+                          Features
+                          <svg
+                            class="ml-1 w-4 h-4"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M19 9l-7 7-7-7"
+                            ></path>
+                          </svg>
+                        </button>
+
+                        <!-- Dropdown Content -->
+                        <div
+                          x-show="featureDropdownOpen"
+                          class="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg py-2 z-50"
+                          x-transition:enter="transition ease-out duration-200"
+                          x-transition:enter-start="opacity-0 transform scale-95"
+                          x-transition:enter-end="opacity-100 transform scale-100"
+                          style="display: none"
+                        >
+                          <a
+                            href="/features/billing"
+                            class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#2596be]"
+                          >
+                            <div class="font-medium element-highlight">
+                              Billing
+                            </div>
+                            <div
+                              class="text-sm text-gray-500 element-highlight"
+                            >
+                              Streamline your restaurant billing process
+                            </div>
+                          </a>
+                          <a
+                            href="/features/inventory"
+                            class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#2596be]"
+                          >
+                            <div class="font-medium">Inventory</div>
+                            <div class="text-sm text-gray-500">
+                              Manage stock and supplies efficiently
+                            </div>
+                          </a>
+                          <a
+                            href="/features/online-ordering"
+                            class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#2596be]"
+                          >
+                            <div class="font-medium">Online Ordering</div>
+                            <div class="text-sm text-gray-500">
+                              Accept orders through digital channels
+                            </div>
+                          </a>
+                          <a
+                            href="/features/reporting"
+                            class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#2596be]"
+                          >
+                            <div class="font-medium">Reporting</div>
+                            <div class="text-sm text-gray-500">
+                              Analyze business performance metrics
+                            </div>
+                          </a>
+                          <a
+                            href="/features/menu"
+                            class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#2596be]"
+                          >
+                            <div class="font-medium">Menu Management</div>
+                            <div class="text-sm text-gray-500">
+                              Digital menu creation and updates
+                            </div>
+                          </a>
+                          <a
+                            href="/features/crm"
+                            class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#2596be]"
+                          >
+                            <div class="font-medium">CRM</div>
+                            <div class="text-sm text-gray-500">
+                              Customer relationship management tools
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+
+                      <!-- Navigation Links -->
+                      <a
+                        href="#pricing"
+                        class="text-gray-700 hover:text-[#2596be] transition duration-300"
+                        >Pricing</a
+                      >
+                      <a
+                        href="#integrations"
+                        class="text-gray-700 hover:text-[#2596be] transition duration-300"
+                        >Integrations</a
+                      >
+                      <a
+                        href="#testimonials"
+                        class="text-gray-700 hover:text-[#2596be] transition duration-300"
+                        >Testimonials</a
+                      >
+
+                      <!-- CTA Button -->
+                      <a
+                        href="#contact"
+                        class="inline-flex items-center justify-center px-6 py-2.5 rounded-md bg-[#2596be] text-white font-medium hover:bg-[#1d7796] transform hover:scale-105 transition-all duration-300 ease-in-out shadow-md hover:shadow-lg"
+                      >
+                        Get Started
+                      </a>
+                    </nav>
+
+                    <!-- Mobile Menu Button -->
+                    <div class="md:hidden flex items-center">
+                      <button
+                        @click="mobileMenuOpen = !mobileMenuOpen"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-[#2596be] focus:outline-none focus:ring-2 focus:ring-[#2596be] focus:ring-offset-2"
+                      >
+                        <svg
+                          class="h-6 w-6"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            :class="{'hidden': mobileMenuOpen, 'inline-flex': !mobileMenuOpen }"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"
+                            class="inline-flex"
+                          ></path>
+                          <path
+                            :class="{'hidden': !mobileMenuOpen, 'inline-flex': mobileMenuOpen }"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12"
+                            class="hidden"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Mobile Menu (Hidden by default) -->
+                <div
+                  x-show="mobileMenuOpen"
+                  class="md:hidden bg-white border-t border-gray-200"
+                  x-transition:enter="transition ease-out duration-200"
+                  x-transition:enter-start="opacity-0 transform -translate-y-2"
+                  x-transition:enter-end="opacity-100 transform translate-y-0"
+                  x-transition:leave="transition ease-in duration-150"
+                  x-transition:leave-start="opacity-100 transform translate-y-0"
+                  x-transition:leave-end="opacity-0 transform -translate-y-2"
+                  style="display: none"
+                >
+                  <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a
+                      href="/features/billing"
+                      class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-[#2596be] hover:bg-gray-50"
+                      >Billing</a
+                    >
+                    <a
+                      href="/features/inventory"
+                      class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-[#2596be] hover:bg-gray-50"
+                      >Inventory</a
+                    >
+                    <a
+                      href="/features/online-ordering"
+                      class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-[#2596be] hover:bg-gray-50"
+                      >Online Ordering</a
+                    >
+                    <a
+                      href="#pricing"
+                      class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-[#2596be] hover:bg-gray-50"
+                      >Pricing</a
+                    >
+                    <a
+                      href="#integrations"
+                      class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-[#2596be] hover:bg-gray-50"
+                      >Integrations</a
+                    >
+                    <a
+                      href="#testimonials"
+                      class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-[#2596be] hover:bg-gray-50"
+                      >Testimonials</a
+                    >
+                    <div class="pt-4">
+                      <a
+                        href="#contact"
+                        class="block w-full text-center px-4 py-2 rounded-md shadow-sm text-white bg-[#2596be] font-medium hover:bg-[#1d7796]"
+                      >
+                        Get Started
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </header>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div
+              :class="{'block': mobileMenuOpen, 'hidden': !mobileMenuOpen}"
+              class="md:hidden bg-white border-b border-gray-200 hidden"
+            >
+              <div class="px-4 pt-3 pb-4 space-y-2.5">
+                <!-- Mobile Features Submenu -->
+                <div x-data="{ mobileFeatureOpen: false }">
+                  <button
+                    @click="mobileFeatureOpen = !mobileFeatureOpen"
+                    class="flex justify-between w-full px-4 py-2.5 text-gray-700 hover:text-[#2596be] hover:bg-gray-50 rounded-md transition duration-300"
+                  >
+                    <span>Features</span>
+                    <svg
+                      class="w-5 h-5"
+                      :class="{'transform rotate-180': mobileFeatureOpen}"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      ></path>
+                    </svg>
+                  </button>
+
+                  <div
+                    x-show="mobileFeatureOpen"
+                    class="pl-4 space-y-2 mt-2"
+                    style="display: none"
+                  >
+                    <a
+                      href="/features/billing"
+                      class="block px-4 py-2 text-gray-600 hover:text-[#2596be] hover:bg-gray-50 rounded-md"
+                      >Billing</a
+                    >
+                    <a
+                      href="/features/inventory"
+                      class="block px-4 py-2 text-gray-600 hover:text-[#2596be] hover:bg-gray-50 rounded-md"
+                      >Inventory</a
+                    >
+                    <a
+                      href="/features/online-ordering"
+                      class="block px-4 py-2 text-gray-600 hover:text-[#2596be] hover:bg-gray-50 rounded-md"
+                      >Online Ordering</a
+                    >
+                    <a
+                      href="/features/reporting"
+                      class="block px-4 py-2 text-gray-600 hover:text-[#2596be] hover:bg-gray-50 rounded-md"
+                      >Reporting</a
+                    >
+                    <a
+                      href="/features/menu"
+                      class="block px-4 py-2 text-gray-600 hover:text-[#2596be] hover:bg-gray-50 rounded-md"
+                      >Menu</a
+                    >
+                    <a
+                      href="/features/crm"
+                      class="block px-4 py-2 text-gray-600 hover:text-[#2596be] hover:bg-gray-50 rounded-md"
+                      >CRM</a
+                    >
+                  </div>
+                </div>
+
+                <a
+                  href="#pricing"
+                  class="block px-4 py-2.5 text-gray-700 hover:text-[#2596be] hover:bg-gray-50 rounded-md transition duration-300"
+                  >Pricing</a
+                >
+                <a
+                  href="#integrations"
+                  class="block px-4 py-2.5 text-gray-700 hover:text-[#2596be] hover:bg-gray-50 rounded-md transition duration-300"
+                  >Integrations</a
+                >
+                <a
+                  href="#testimonials"
+                  class="block px-4 py-2.5 text-gray-700 hover:text-[#2596be] hover:bg-gray-50 rounded-md transition duration-300"
+                  >Testimonials</a
+                >
+                <a
+                  href="#contact"
+                  class="block w-full text-center px-6 py-2.5 bg-[#2596be] text-white font-medium rounded-md hover:bg-[#1d7796] transform hover:scale-105 transition-all duration-300 ease-in-out shadow-md hover:shadow-lg"
+                  >Get Started</a
+                >
+              </div>
+            </div>
+          </nav>
+
+          <!-- Hero Section -->
+          <div
+            class="pt-16 pb-8 sm:pt-24 sm:pb-12 lg:pt-32 lg:pb-16"
+            id="el-ux8v99w7"
+          >
+            <div
+              class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+              id="el-91b0ln3n"
+            >
+              <div class="lg:grid lg:grid-cols-12 lg:gap-8" id="el-8508tmsj">
+                <div
+                  class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left element-highlight"
+                  id="el-kqrnjzhi"
+                >
+                  <h1
+                    class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl"
+                    id="el-n9otaamu"
+                  >
+                    <span class="block" id="el-5kzn7flr">AI-Powered POS</span>
+                    <span class="block text-[#2596be]" id="el-t63mf7nw"
+                      >for Restaurants</span
+                    >
+                  </h1>
+                  <p
+                    class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl"
+                    id="el-n1aqv8p9"
+                  >
+                    Simplify Operations, Delight Customers, Drive Revenue.
+                    Uprestro POS is your all-in-one solution for efficient
+                    restaurant management – lightning-fast, offline/online, and
+                    AI-driven insights.
+                  </p>
+                  <div
+                    class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left"
+                    id="el-8aww764w"
+                  >
+                    <div
+                      class="space-y-4 sm:space-y-0 sm:flex sm:justify-center lg:justify-start"
+                      id="el-c9f4lk7p"
+                    >
+                      <a
+                        href="#contact"
+                        class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#2596be] hover:bg-[#1d7796] transition duration-300 sm:px-8"
+                        id="el-dlx2c5wf"
+                      >
+                        Request a Demo
+                      </a>
+                      <a
+                        href="#features"
+                        class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-[#2596be] bg-[#e6f3f8] hover:bg-[#cce7f2] transition duration-300 sm:px-8 sm:ml-4"
+                        id="el-oga9uwn5"
+                      >
+                        Learn More
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="mt-12 lg:m-0 lg:col-span-6 element-highlight"
+                  id="el-dfhkucpy"
+                >
+                  <div class="px-4 lg:p-0" id="el-d0pjxz83">
+                    <div
+                      class="aspect-w-16 aspect-h-9 rounded-xl shadow-xl overflow-hidden bg-gray-100 animate-float"
+                      id="el-8qyaj5cl"
+                    >
+                      <img
+                        src="https://dms.mydukaan.io/original/webp/media/ca565db1-df7c-448b-b7bb-889458e10355.png"
+                        alt="POS System with Girl"
+                        class="w-full h-full object-cover element-highlight transition-opacity duration-300 opacity-100"
+                        loading="lazy"
+                        id="el-ckfe68e3"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+    <section id="section-fc6bbcce-1fd0-4a61-9061-b9f6f0872a36">
+      <section
+        id="features"
+        class="py-20 bg-[#2596be] bg-opacity-5 element-highlight"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="el-zppmsuro">
+          <div class="text-center" id="el-6nvdviga">
+            <h2
+              class="text-3xl font-extrabold text-gray-900 sm:text-4xl lg:text-5xl"
+              id="el-ag8xahx1"
+            >
+              Powerful Features for Modern Restaurants
+            </h2>
+            <p
+              class="mt-4 max-w-2xl mx-auto text-xl text-gray-500"
+              id="el-wslp8a4i"
+            >
+              Everything you need to streamline operations and boost revenue
+            </p>
+          </div>
+
+          <div
+            class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+            id="el-jw1si85s"
+          >
+            <!-- AI-Driven Insights -->
+            <div
+              class="bg-white rounded-xl shadow-sm p-8 hover:shadow-lg transition duration-300"
+              id="el-rv2wk3nx"
+            >
+              <div class="text-[#2596be] mb-4" id="el-0uy8i326">
+                <i class="fas fa-robot text-3xl" id="el-6smsrws2"></i>
+              </div>
+              <h3
+                class="text-xl font-semibold text-gray-900 mb-2"
+                id="el-av38rhoa"
+              >
+                AI-Driven Insights
+              </h3>
+              <p class="text-gray-600" id="el-rv8om1py">
+                Smart analytics and predictions to optimize your menu and
+                operations. Reduce costs by 30% with AI recommendations.
+              </p>
+            </div>
+
+            <!-- Offline/Online Mode -->
+            <div
+              class="bg-white rounded-xl shadow-sm p-8 hover:shadow-lg transition duration-300"
+              id="el-9qz9tpx8"
+            >
+              <div class="text-[#2596be] mb-4" id="el-yilexibf">
+                <i class="fas fa-wifi text-3xl" id="el-f37lljoo"></i>
+              </div>
+              <h3
+                class="text-xl font-semibold text-gray-900 mb-2"
+                id="el-1y47t2ur"
+              >
+                Offline/Online Mode
+              </h3>
+              <p class="text-gray-600" id="el-o35cp2wp">
+                Never miss a sale. Seamlessly switch between offline and online
+                operations with automatic sync.
+              </p>
+            </div>
+
+            <!-- Super Admin Dashboard -->
+            <div
+              class="bg-white rounded-xl shadow-sm p-8 hover:shadow-lg transition duration-300"
+              id="el-52i623pm"
+            >
+              <div class="text-[#2596be] mb-4" id="el-eotixht3">
+                <i class="fas fa-chart-bar text-3xl" id="el-sd7p1hzi"></i>
+              </div>
+              <h3
+                class="text-xl font-semibold text-gray-900 mb-2"
+                id="el-9ydf82nr"
+              >
+                Super Admin Dashboard
+              </h3>
+              <p class="text-gray-600" id="el-zrua5uei">
+                Complete control over multiple locations with real-time
+                monitoring and advanced reporting.
+              </p>
+            </div>
+
+            <!-- Order Processing -->
+            <div
+              class="bg-white rounded-xl shadow-sm p-8 hover:shadow-lg transition duration-300"
+              id="el-8kmy65v1"
+            >
+              <div class="text-[#2596be] mb-4" id="el-jr08ving">
+                <i class="fas fa-clock text-3xl" id="el-pa7xp45s"></i>
+              </div>
+              <h3
+                class="text-xl font-semibold text-gray-900 mb-2"
+                id="el-8kfdu84z"
+              >
+                Fast Order Processing
+              </h3>
+              <p class="text-gray-600" id="el-cqj2euxi">
+                Reduce order processing time by 40%. Handle rush hours with ease
+                and improve customer satisfaction.
+              </p>
+            </div>
+
+            <!-- Inventory Management -->
+            <div
+              class="bg-white rounded-xl shadow-sm p-8 hover:shadow-lg transition duration-300"
+              id="el-x4ln433v"
+            >
+              <div class="text-[#2596be] mb-4" id="el-7pcmrl6a">
+                <i class="fas fa-box text-3xl" id="el-m34opq3w"></i>
+              </div>
+              <h3
+                class="text-xl font-semibold text-gray-900 mb-2"
+                id="el-whe773ql"
+              >
+                Inventory Management
+              </h3>
+              <p class="text-gray-600" id="el-pnnevx28">
+                Smart stock tracking and automated reordering. Reduce waste and
+                never run out of essential items.
+              </p>
+            </div>
+
+            <!-- Customer Analytics -->
+            <div
+              class="bg-white rounded-xl shadow-sm p-8 hover:shadow-lg transition duration-300"
+              id="el-lg5d4ybb"
+            >
+              <div class="text-[#2596be] mb-4" id="el-ockj8863">
+                <i class="fas fa-users text-3xl" id="el-4kycqgg7"></i>
+              </div>
+              <h3
+                class="text-xl font-semibold text-gray-900 mb-2"
+                id="el-3kgg32nj"
+              >
+                Customer Analytics
+              </h3>
+              <p class="text-gray-600" id="el-quuldl72">
+                Understand your customers better with detailed insights and
+                personalized marketing capabilities.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-16 text-center" id="el-j8sim704">
+            <a
+              href="#contact"
+              class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#2596be] hover:bg-[#1d7796] transition duration-300"
+              id="el-m5kb9id7"
+            >
+              Book Your Free Demo
+              <i class="fas fa-arrow-right ml-2" id="el-pf7gb67w"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section id="section-2e5f4f53-868e-4b24-9e1b-39385f80a5cf">
+      <section id="how_it_works" class="py-20 bg-white element-highlight">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="el-k1xuzgdk">
+          <div class="text-center">
+            <h2
+              class="text-3xl font-extrabold text-gray-900 sm:text-4xl lg:text-5xl"
+            >
+              Getting Started is Simple
+            </h2>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+              Set up your restaurant POS system in three easy steps
+            </p>
+          </div>
+
+          <div class="mt-16 relative">
+            <!-- Connection lines -->
+            <div
+              class="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-200 -translate-y-1/2"
+            ></div>
+
+            <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
+              <!-- Step 1 -->
+              <div class="relative">
+                <div class="flex flex-col items-center group">
+                  <div
+                    class="flex items-center justify-center w-16 h-16 rounded-full bg-[#2596be]/10 text-[#2596be] text-2xl font-bold mb-6 transition-colors duration-300 group-hover:bg-[#2596be]/20 group-hover:text-[#2596be]"
+                  >
+                    1
+                  </div>
+                  <h3
+                    class="text-xl font-semibold text-gray-900 mb-4 transition-colors duration-300 group-hover:text-[#2596be]"
+                  >
+                    Sign Up
+                  </h3>
+                  <p
+                    class="text-center text-gray-600 transition-colors duration-300 group-hover:text-gray-700"
+                  >
+                    Complete our simple registration process and choose your
+                    plan. No credit card required for trial.
+                  </p>
+                </div>
+                <div
+                  class="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2"
+                >
+                  <i class="fas fa-arrow-right text-2xl text-[#2596be]/30"></i>
+                </div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="relative">
+                <div class="flex flex-col items-center group">
+                  <div
+                    class="flex items-center justify-center w-16 h-16 rounded-full bg-[#2596be]/10 text-[#2596be] text-2xl font-bold mb-6 transition-colors duration-300 group-hover:bg-[#2596be]/20 group-hover:text-[#2596be]"
+                  >
+                    2
+                  </div>
+                  <h3
+                    class="text-xl font-semibold text-gray-900 mb-4 transition-colors duration-300 group-hover:text-[#2596be]"
+                  >
+                    Customize
+                  </h3>
+                  <p
+                    class="text-center text-gray-600 transition-colors duration-300 group-hover:text-gray-700"
+                  >
+                    Set up your menu, configure settings, and customize the
+                    system to match your restaurant's needs.
+                  </p>
+                </div>
+                <div
+                  class="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2"
+                >
+                  <i class="fas fa-arrow-right text-2xl text-[#2596be]/30"></i>
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="relative">
+                <div class="flex flex-col items-center group">
+                  <div
+                    class="flex items-center justify-center w-16 h-16 rounded-full bg-[#2596be]/10 text-[#2596be] text-2xl font-bold mb-6 transition-colors duration-300 group-hover:bg-[#2596be]/20 group-hover:text-[#2596be]"
+                  >
+                    3
+                  </div>
+                  <h3
+                    class="text-xl font-semibold text-gray-900 mb-4 transition-colors duration-300 group-hover:text-[#2596be]"
+                  >
+                    Start Selling
+                  </h3>
+                  <p
+                    class="text-center text-gray-600 transition-colors duration-300 group-hover:text-gray-700"
+                  >
+                    Go live with your new POS system and start managing orders,
+                    tracking inventory, and growing your business.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-16 text-center">
+              <div class="space-y-4 sm:space-y-0 sm:flex sm:justify-center">
+                <a
+                  href="#contact"
+                  class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#2596be] hover:bg-[#2596be]/90 transition duration-300"
+                >
+                  Get Started Now
+                  <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+                <a
+                  href="#pricing"
+                  class="inline-flex items-center px-8 py-3 border border-[#2596be] text-base font-medium rounded-md text-[#2596be] hover:bg-[#2596be]/5 transition duration-300 sm:ml-4"
+                >
+                  View Pricing
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section id="section-562379e5-7834-4a38-94b6-683f769e7b76">
+      <div id="root">
+        <section
+          id="benefits"
+          class="py-20 bg-gradient-to-b from-[#2596be] to-[#1a6b8a] element-highlight"
+        >
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+              <h2
+                class="text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl"
+              >
+                Why Choose Uprestro POS?
+              </h2>
+              <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-100">
+                Transform your restaurant operations with proven results
+              </p>
+            </div>
+
+            <div class="mt-16 grid gap-8 lg:grid-cols-2">
+              <!-- Benefits with Stats -->
+              <div
+                class="bg-[#1f85aa] rounded-2xl shadow-xl border border-[#3aa7cf] overflow-hidden"
+              >
+                <div class="p-8">
+                  <div class="grid gap-8 sm:grid-cols-2">
+                    <!-- Stat 1 -->
+                    <div class="text-center">
+                      <div class="text-4xl font-bold text-white">40%</div>
+                      <div class="mt-2 text-gray-100">
+                        Faster Order Processing
+                      </div>
+                    </div>
+                    <!-- Stat 2 -->
+                    <div class="text-center">
+                      <div class="text-4xl font-bold text-white">30%</div>
+                      <div class="mt-2 text-gray-100">Cost Reduction</div>
+                    </div>
+                    <!-- Stat 3 -->
+                    <div class="text-center">
+                      <div class="text-4xl font-bold text-white">25%</div>
+                      <div class="mt-2 text-gray-100">Revenue Increase</div>
+                    </div>
+                    <!-- Stat 4 -->
+                    <div class="text-center">
+                      <div class="text-4xl font-bold text-white">99.9%</div>
+                      <div class="mt-2 text-gray-100">Uptime Guarantee</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Key Benefits List -->
+              <div
+                class="bg-[#1f85aa] rounded-2xl shadow-xl border border-[#3aa7cf] p-8"
+              >
+                <div class="space-y-6">
+                  <div class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <div
+                        class="flex items-center justify-center h-12 w-12 rounded-full bg-white text-[#2596be]"
+                      >
+                        <i class="fas fa-check-circle text-xl"></i>
+                      </div>
+                    </div>
+                    <div class="ml-4">
+                      <h3 class="text-lg font-semibold text-white">
+                        Enhanced Efficiency
+                      </h3>
+                      <p class="mt-2 text-gray-100">
+                        Streamline operations with AI-powered automation and
+                        real-time insights
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <div
+                        class="flex items-center justify-center h-12 w-12 rounded-full bg-white text-[#2596be]"
+                      >
+                        <i class="fas fa-shield-alt text-xl"></i>
+                      </div>
+                    </div>
+                    <div class="ml-4">
+                      <h3 class="text-lg font-semibold text-white">
+                        Reliable Performance
+                      </h3>
+                      <p class="mt-2 text-gray-100">
+                        Works offline and online with automatic syncing and
+                        backup
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start">
+                    <div class="flex-shrink-0">
+                      <div
+                        class="flex items-center justify-center h-12 w-12 rounded-full bg-white text-[#2596be]"
+                      >
+                        <i class="fas fa-chart-line text-xl"></i>
+                      </div>
+                    </div>
+                    <div class="ml-4">
+                      <h3 class="text-lg font-semibold text-white">
+                        Data-Driven Growth
+                      </h3>
+                      <p class="mt-2 text-gray-100">
+                        Make informed decisions with comprehensive analytics and
+                        reporting
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="mt-16 text-center">
+              <h3 class="text-2xl font-bold text-white">
+                Ready to transform your restaurant?
+              </h3>
+              <div class="mt-8">
+                <a
+                  href="#contact"
+                  class="inline-flex items-center px-8 py-3 border-2 border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-[#2596be] transition-all duration-300 ease-in-out group"
+                >
+                  Book Your Free Demo
+                  <i
+                    class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"
+                  ></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+    <section id="section-05cb6ea0-7aa3-4369-8b56-abf85f01832e">
+      <section id="testimonials" class="py-20 bg-white element-highlight">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center">
+            <h2
+              class="text-3xl font-extrabold text-[#2596be] sm:text-4xl lg:text-5xl"
+            >
+              Success Stories
+            </h2>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+              See how restaurants like yours are growing with Uprestro POS
+            </p>
+          </div>
+
+          <div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Testimonial 1 -->
+            <div class="bg-white rounded-xl shadow-lg p-8">
+              <div class="flex items-center mb-6">
+                <div class="flex-shrink-0">
+                  <div
+                    class="h-12 w-12 rounded-full bg-[#2596be]/10 flex items-center justify-center"
+                  >
+                    <i class="fas fa-user text-[#2596be]"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-lg font-semibold text-gray-900">
+                    Sarah Thompson
+                  </h3>
+                  <p class="text-gray-600">Restaurant Owner, The Bistro</p>
+                </div>
+              </div>
+              <div class="text-[#2596be] mb-4">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="text-gray-600 mb-4">
+                "Uprestro POS has revolutionized our operations. We've seen a
+                20% increase in revenue and significantly reduced order
+                processing times."
+              </p>
+              <div class="border-t pt-4">
+                <div class="flex items-center text-[#2596be]">
+                  <i class="fas fa-chart-line mr-2"></i>
+                  <span class="font-semibold">25% Revenue Growth</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="bg-white rounded-xl shadow-lg p-8">
+              <div class="flex items-center mb-6">
+                <div class="flex-shrink-0">
+                  <div
+                    class="h-12 w-12 rounded-full bg-[#2596be]/10 flex items-center justify-center"
+                  >
+                    <i class="fas fa-user text-[#2596be]"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-lg font-semibold text-gray-900">
+                    Michael Chen
+                  </h3>
+                  <p class="text-gray-600">Operations Manager, Asian Fusion</p>
+                </div>
+              </div>
+              <div class="text-[#2596be] mb-4">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="text-gray-600 mb-4">
+                "The AI-driven insights have helped us optimize our menu and
+                reduce waste. Customer satisfaction has improved dramatically."
+              </p>
+              <div class="border-t pt-4">
+                <div class="flex items-center text-[#2596be]">
+                  <i class="fas fa-clock mr-2"></i>
+                  <span class="font-semibold">40% Faster Service</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="bg-white rounded-xl shadow-lg p-8">
+              <div class="flex items-center mb-6">
+                <div class="flex-shrink-0">
+                  <div
+                    class="h-12 w-12 rounded-full bg-[#2596be]/10 flex items-center justify-center"
+                  >
+                    <i class="fas fa-user text-[#2596be]"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-lg font-semibold text-gray-900">
+                    David Martinez
+                  </h3>
+                  <p class="text-gray-600">Owner, Café Excellence</p>
+                </div>
+              </div>
+              <div class="text-[#2596be] mb-4">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="text-gray-600 mb-4">
+                "The offline mode has been a lifesaver. We never miss a sale,
+                and the super admin dashboard gives me complete control."
+              </p>
+              <div class="border-t pt-4">
+                <div class="flex items-center text-[#2596be]">
+                  <i class="fas fa-calculator mr-2"></i>
+                  <span class="font-semibold">30% Cost Reduction</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Section -->
+          <div class="mt-16 text-center">
+            <h3 class="text-2xl font-bold text-[#2596be]">
+              Join these successful restaurants
+            </h3>
+            <div class="mt-8">
+              <a
+                href="#contact"
+                class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#2596be] hover:bg-[#2086ab] transition-all duration-300 transform hover:scale-105"
+              >
+                Start Your Success Story
+                <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section id="section-c813c196-7362-4755-876f-540044dd83ba">
+      <section id="pricing" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center">
+            <h2
+              class="text-3xl font-extrabold text-gray-900 sm:text-4xl lg:text-5xl"
+            >
+              Simple, Transparent Pricing
+            </h2>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+              Affordable plans for restaurants of all sizes
+            </p>
+          </div>
+
+          <div class="mt-16 grid gap-8 lg:grid-cols-3">
+            <!-- Starter Plan -->
+            <div
+              class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl"
+            >
+              <div class="px-6 py-8" style="background-color: #2596be1a">
+                <h3 class="text-2xl font-bold text-gray-900">Starter</h3>
+                <p class="mt-2 text-gray-600">Perfect for new restaurants</p>
+                <div class="mt-4">
+                  <span class="text-4xl font-bold text-gray-900">₹999</span>
+                  <span class="text-gray-600">/month</span>
+                </div>
+              </div>
+              <div class="px-6 py-8">
+                <ul class="space-y-4">
+                  <li class="flex items-start">
+                    <i
+                      class="fas fa-check"
+                      style="color: #2596be; margin-top: 0.25rem"
+                    ></i>
+                    <span class="ml-3 text-gray-600"
+                      >Single location support</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <i
+                      class="fas fa-check"
+                      style="color: #2596be; margin-top: 0.25rem"
+                    ></i>
+                    <span class="ml-3 text-gray-600">Basic POS features</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i
+                      class="fas fa-check"
+                      style="color: #2596be; margin-top: 0.25rem"
+                    ></i>
+                    <span class="ml-3 text-gray-600">Offline mode</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i
+                      class="fas fa-check"
+                      style="color: #2596be; margin-top: 0.25rem"
+                    ></i>
+                    <span class="ml-3 text-gray-600">Email support</span>
+                  </li>
+                </ul>
+                <div class="mt-8">
+                  <a
+                    href="#contact"
+                    class="block text-center px-6 py-3 border rounded-md transition duration-300"
+                    style="border-color: #2596be; color: #2596be; hover:background-color: #2596be1a;"
+                  >
+                    Start Free Trial
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Growth Plan -->
+            <div
+              class="bg-white rounded-2xl shadow-xl overflow-hidden transform scale-105 lg:scale-105 z-10"
+            >
+              <div class="px-6 py-8" style="background-color: #2596be">
+                <div class="flex justify-between items-center">
+                  <div>
+                    <h3 class="text-2xl font-bold text-white">Growth</h3>
+                    <p class="mt-2" style="color: #2596be33">
+                      Most popular choice
+                    </p>
+                  </div>
+                  <span
+                    class="px-3 py-1 rounded-full text-sm text-white"
+                    style="background-color: #2596be"
+                  >
+                    Best Value
+                  </span>
+                </div>
+                <div class="mt-4">
+                  <span class="text-4xl font-bold text-white">₹2499</span>
+                  <span style="color: #2596be33">/month</span>
+                </div>
+              </div>
+              <div class="px-6 py-8">
+                <ul class="space-y-4">
+                  <li class="flex items-start">
+                    <i
+                      class="fas fa-check"
+                      style="color: #2596be; margin-top: 0.25rem"
+                    ></i>
+                    <span class="ml-3 text-gray-600"
+                      >Everything in Starter</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <i
+                      class="fas fa-check"
+                      style="color: #2596be; margin-top: 0.25rem"
+                    ></i>
+                    <span class="ml-3 text-gray-600">Up to 3 locations</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i
+                      class="fas fa-check"
+                      style="color: #2596be; margin-top: 0.25rem"
+                    ></i>
+                    <span class="ml-3 text-gray-600">AI-driven insights</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i
+                      class="fas fa-check"
+                      style="color: #2596be; margin-top: 0.25rem"
+                    ></i>
+                    <span class="ml-3 text-gray-600">Priority support</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i
+                      class="fas fa-check"
+                      style="color: #2596be; margin-top: 0.25rem"
+                    ></i>
+                    <span class="ml-3 text-gray-600">Advanced analytics</span>
+                  </li>
+                </ul>
+                <div class="mt-8">
+                  <a
+                    href="#contact"
+                    class="block text-center px-6 py-3 text-white rounded-md transition duration-300"
+                    style="background-color: #2596be; hover:background-color: #2086ab;"
+                  >
+                    Book Free Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div
+              class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl"
+            >
+              <div class="px-6 py-8" style="background-color: #2596be1a">
+                <h3 class="text-2xl font-bold text-gray-900">Enterprise</h3>
+                <p class="mt-2 text-gray-600">For restaurant chains</p>
+                <div class="mt-4">
+                  <span class="text-4xl font-bold text-gray-900">Custom</span>
+                </div>
+              </div>
+              <div class="px-6 py-8">
+                <ul class="space-y-4">
+                  <li class="flex items-start">
+                    <i
+                      class="fas fa-check"
+                      style="color: #2596be; margin-top: 0.25rem"
+                    ></i>
+                    <span class="ml-3 text-gray-600">Everything in Growth</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i
+                      class="fas fa-check"
+                      style="color: #2596be; margin-top: 0.25rem"
+                    ></i>
+                    <span class="ml-3 text-gray-600">Unlimited locations</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i
+                      class="fas fa-check"
+                      style="color: #2596be; margin-top: 0.25rem"
+                    ></i>
+                    <span class="ml-3 text-gray-600">Custom integrations</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i
+                      class="fas fa-check"
+                      style="color: #2596be; margin-top: 0.25rem"
+                    ></i>
+                    <span class="ml-3 text-gray-600"
+                      >24/7 dedicated support</span
+                    >
+                  </li>
+                </ul>
+                <div class="mt-8">
+                  <a
+                    href="#contact"
+                    class="block text-center px-6 py-3 border rounded-md transition duration-300"
+                    style="border-color: #2596be; color: #2596be; hover:background-color: #2596be1a;"
+                  >
+                    Contact Sales
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional Information -->
+          <div class="mt-16 text-center">
+            <p class="text-gray-500 mb-8">
+              All plans include a 14-day free trial. No credit card required.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+              <div class="flex items-center">
+                <i class="fas fa-check-circle mr-2" style="color: #2596be"></i>
+                <span class="text-gray-600">Free setup assistance</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-check-circle mr-2" style="color: #2596be"></i>
+                <span class="text-gray-600">No hidden fees</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-check-circle mr-2" style="color: #2596be"></i>
+                <span class="text-gray-600">Cancel anytime</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section id="section-1838b01b-4e29-423c-8d09-24d09d3947f1">
+      <section id="faq" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center">
+            <h2
+              class="text-3xl font-extrabold text-gray-900 sm:text-4xl lg:text-5xl"
+            >
+              Frequently Asked Questions
+            </h2>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+              Everything you need to know about Uprestro POS
+            </p>
+          </div>
+
+          <div class="mt-16 max-w-3xl mx-auto" x-data="{ selected: null }">
+            <!-- FAQ Item 1 -->
+            <div class="mb-4">
+              <button
+                @click="selected !== 1 ? selected = 1 : selected = null"
+                class="flex justify-between w-full px-4 py-4 bg-white rounded-lg shadow-sm hover:shadow-md transition duration-300"
+              >
+                <span class="text-lg font-semibold text-gray-900"
+                  >How does the offline mode work?</span
+                >
+                <i
+                  class="fas"
+                  :class="selected === 1 ? 'fa-chevron-up text-[#2596be]' : 'fa-chevron-down text-gray-400'"
+                ></i>
+              </button>
+              <div
+                x-show="selected === 1"
+                x-transition:enter="transition ease-out duration-200"
+                x-transition:enter-start="opacity-0 transform -translate-y-2"
+                x-transition:enter-end="opacity-100 transform translate-y-0"
+                class="px-4 py-4 bg-gray-50 rounded-b-lg mt-1"
+              >
+                <p class="text-gray-600">
+                  Our system automatically syncs data when online and stores all
+                  transactions locally when offline. Once internet connection is
+                  restored, all data is synchronized automatically without any
+                  manual intervention.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="mb-4">
+              <button
+                @click="selected !== 2 ? selected = 2 : selected = null"
+                class="flex justify-between w-full px-4 py-4 bg-white rounded-lg shadow-sm hover:shadow-md transition duration-300"
+              >
+                <span class="text-lg font-semibold text-gray-900"
+                  >What type of support do you provide?</span
+                >
+                <i
+                  class="fas"
+                  :class="selected === 2 ? 'fa-chevron-up text-[#2596be]' : 'fa-chevron-down text-gray-400'"
+                ></i>
+              </button>
+              <div
+                x-show="selected === 2"
+                x-transition:enter="transition ease-out duration-200"
+                x-transition:enter-start="opacity-0 transform -translate-y-2"
+                x-transition:enter-end="opacity-100 transform translate-y-0"
+                class="px-4 py-4 bg-gray-50 rounded-b-lg mt-1"
+              >
+                <p class="text-gray-600">
+                  We offer 24/7 customer support via email and phone. Enterprise
+                  customers get dedicated support managers. All customers
+                  receive free setup assistance and training.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="mb-4">
+              <button
+                @click="selected !== 3 ? selected = 3 : selected = null"
+                class="flex justify-between w-full px-4 py-4 bg-white rounded-lg shadow-sm hover:shadow-md transition duration-300"
+              >
+                <span class="text-lg font-semibold text-gray-900"
+                  >Can I integrate with my existing systems?</span
+                >
+                <i
+                  class="fas"
+                  :class="selected === 3 ? 'fa-chevron-up text-[#2596be]' : 'fa-chevron-down text-gray-400'"
+                ></i>
+              </button>
+              <div
+                x-show="selected === 3"
+                x-transition:enter="transition ease-out duration-200"
+                x-transition:enter-start="opacity-0 transform -translate-y-2"
+                x-transition:enter-end="opacity-100 transform translate-y-0"
+                class="px-4 py-4 bg-gray-50 rounded-b-lg mt-1"
+              >
+                <p class="text-gray-600">
+                  Yes, we offer various integration options with popular
+                  accounting software, delivery platforms, and inventory
+                  management systems. Custom integrations are available for
+                  Enterprise plans.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="mb-4">
+              <button
+                @click="selected !== 4 ? selected = 4 : selected = null"
+                class="flex justify-between w-full px-4 py-4 bg-white rounded-lg shadow-sm hover:shadow-md transition duration-300"
+              >
+                <span class="text-lg font-semibold text-gray-900"
+                  >How secure is my data?</span
+                >
+                <i
+                  class="fas"
+                  :class="selected === 4 ? 'fa-chevron-up text-[#2596be]' : 'fa-chevron-down text-gray-400'"
+                ></i>
+              </button>
+              <div
+                x-show="selected === 4"
+                x-transition:enter="transition ease-out duration-200"
+                x-transition:enter-start="opacity-0 transform -translate-y-2"
+                x-transition:enter-end="opacity-100 transform translate-y-0"
+                class="px-4 py-4 bg-gray-50 rounded-b-lg mt-1"
+              >
+                <p class="text-gray-600">
+                  We use industry-standard encryption and security protocols.
+                  Your data is backed up regularly and stored in secure cloud
+                  servers. We are compliant with all relevant data protection
+                  regulations.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Section -->
+          <div class="mt-16 text-center">
+            <p class="text-gray-600 mb-8">
+              Still have questions? We're here to help!
+            </p>
+            <div class="flex justify-center gap-4">
+              <a
+                href="#contact"
+                class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#2596be] hover:bg-[#1d7596] transition duration-300"
+              >
+                Contact Support
+                <i class="fas fa-headset ml-2"></i>
+              </a>
+              <a
+                href="#"
+                class="inline-flex items-center px-6 py-3 border border-[#2596be] text-base font-medium rounded-md text-[#2596be] hover:bg-[#2596be]/10 transition duration-300"
+              >
+                View Documentation
+                <i class="fas fa-book ml-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section id="section-9f781d85-62c1-4933-8b95-93fc000c1eda">
+      <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center">
+            <h2
+              class="text-3xl font-extrabold text-gray-900 sm:text-4xl lg:text-5xl"
+            >
+              Let's Transform Your Restaurant
+            </h2>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+              Book a free demo or get in touch with our sales team
+            </p>
+          </div>
+
+          <div class="mt-16 grid gap-8 lg:grid-cols-2">
+            <!-- Contact Form -->
+            <div
+              class="bg-white rounded-2xl shadow-lg p-8"
+              x-data="{ formSubmitted: false }"
+            >
+              <form @submit.prevent="formSubmitted = true" class="space-y-6">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-sm font-medium text-gray-700"
+                    >Full Name *</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#2596be] focus:ring-[#2596be]"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    for="restaurant"
+                    class="block text-sm font-medium text-gray-700"
+                    >Restaurant Name *</label
+                  >
+                  <input
+                    type="text"
+                    id="restaurant"
+                    name="restaurant"
+                    required
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#2596be] focus:ring-[#2596be]"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    for="email"
+                    class="block text-sm font-medium text-gray-700"
+                    >Email Address *</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#2596be] focus:ring-[#2596be]"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    for="phone"
+                    class="block text-sm font-medium text-gray-700"
+                    >Phone Number *</label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#2596be] focus:ring-[#2596be]"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    for="message"
+                    class="block text-sm font-medium text-gray-700"
+                    >Message (Optional)</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#2596be] focus:ring-[#2596be]"
+                  ></textarea>
+                </div>
+
+                <div class="flex items-center">
+                  <button
+                    type="submit"
+                    class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#2596be] hover:bg-[#1d7596] transition duration-300"
+                  >
+                    Book Your Free Demo
+                    <i class="fas fa-arrow-right ml-2"></i>
+                  </button>
+                </div>
+              </form>
+
+              <!-- Success Message -->
+              <!-- <div
+                x-show="formSubmitted"
+                x-transition
+                class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
+              >
+                <div class="bg-white rounded-lg p-8 max-w-md mx-4">
+                  <div class="text-center">
+                    <i
+                      class="fas fa-check-circle text-6xl text-[#2596be] mb-4"
+                    ></i>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                      Thank You!
+                    </h3>
+                    <p class="text-gray-600 mb-6">
+                      We've received your request and will contact you shortly
+                      to schedule your demo.
+                    </p>
+                    <button
+                      @click="formSubmitted = false"
+                      class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-[#2596be] hover:bg-[#1d7596]"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+
+            <!-- Contact Information -->
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+              <div class="space-y-8">
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                    Get in Touch
+                  </h3>
+                  <div class="space-y-4">
+                    <div class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <div
+                          class="flex h-12 w-12 items-center justify-center rounded-full bg-[#e8f4f9]"
+                        >
+                          <i class="fas fa-phone text-[#2596be]"></i>
+                        </div>
+                      </div>
+                      <div class="ml-4">
+                        <p class="text-lg font-medium text-gray-900">Phone</p>
+                        <a
+                          href="tel:+91123456789"
+                          class="text-gray-600 hover:text-[#2596be]"
+                          >+91 12345 67890</a
+                        >
+                      </div>
+                    </div>
+
+                    <div class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <div
+                          class="flex h-12 w-12 items-center justify-center rounded-full bg-[#e8f4f9]"
+                        >
+                          <i class="fas fa-envelope text-[#2596be]"></i>
+                        </div>
+                      </div>
+                      <div class="ml-4">
+                        <p class="text-lg font-medium text-gray-900">Email</p>
+                        <a
+                          href="mailto:sales@uprestro.com"
+                          class="text-gray-600 hover:text-[#2596be]"
+                          >sales@uprestro.com</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                    Follow Us
+                  </h3>
+                  <div class="flex space-x-4">
+                    <a
+                      href="#"
+                      class="text-gray-400 hover:text-[#2596be] transition duration-300"
+                    >
+                      <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="text-gray-400 hover:text-[#2596be] transition duration-300"
+                    >
+                      <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="text-gray-400 hover:text-[#2596be] transition duration-300"
+                    >
+                      <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="text-gray-400 hover:text-[#2596be] transition duration-300"
+                    >
+                      <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                    Newsletter
+                  </h3>
+                  <form class="mt-4 sm:flex">
+                    <input
+                      type="email"
+                      placeholder="Enter your email"
+                      class="block w-full rounded-md border-gray-300 shadow-sm focus:border-[#2596be] focus:ring-[#2596be] sm:max-w-xs"
+                    />
+                    <button
+                      type="submit"
+                      class="mt-3 sm:mt-0 sm:ml-3 inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-[#2596be] hover:bg-[#1d7596]"
+                    >
+                      Subscribe
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section id="section-8d33fc5e-c20a-4042-a045-a28579d0712b">
+      <section id="footer" class="bg-gray-900 text-gray-200 element-highlight">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="el-7v98mtu4">
+          <!-- Main Footer Content -->
+          <div
+            class="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+            id="el-7oupa7pz"
+          >
+            <!-- Company Info -->
+            <div id="el-d95yk6qd">
+              <h3 class="text-2xl font-bold text-white mb-6" id="el-oa4ba1p4">
+                Uprestro
+              </h3>
+              <p class="text-gray-400 mb-6" id="el-xomi5gew">
+                Transforming restaurant operations with AI-powered POS solutions
+                that drive growth and efficiency.
+              </p>
+              <div class="flex space-x-4" id="el-mqdt14p2">
+                <a
+                  href="#"
+                  class="text-[#2596be] hover:text-white transition-colors duration-300"
+                  id="el-vzb68l0v"
+                >
+                  <i class="fab fa-facebook-f" id="el-7m9bs7k6"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-[#2596be] hover:text-white transition-colors duration-300"
+                  id="el-x8xp8naw"
+                >
+                  <i class="fab fa-twitter" id="el-sf8lpkhb"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-[#2596be] hover:text-white transition-colors duration-300"
+                  id="el-8f0mr3aq"
+                >
+                  <i class="fab fa-linkedin-in" id="el-g9bb9swp"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-[#2596be] hover:text-white transition-colors duration-300"
+                  id="el-hjup1d9n"
+                >
+                  <i class="fab fa-instagram" id="el-1y8y33xf"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div id="el-wgfe8qca">
+              <h4
+                class="text-lg font-semibold text-white mb-6"
+                id="el-fx3ffh8t"
+              >
+                Quick Links
+              </h4>
+              <ul class="space-y-4" id="el-pg8oq1dg">
+                <li id="el-3jv49wu0">
+                  <a
+                    href="#features"
+                    class="text-[#2596be] hover:text-white transition-colors duration-300"
+                    id="el-au75c8g8"
+                    >Features</a
+                  >
+                </li>
+                <li id="el-47lenbfq">
+                  <a
+                    href="#pricing"
+                    class="text-[#2596be] hover:text-white transition-colors duration-300"
+                    id="el-hbwwfdbi"
+                    >Pricing</a
+                  >
+                </li>
+                <li id="el-kukewxfh">
+                  <a
+                    href="#testimonials"
+                    class="text-[#2596be] hover:text-white transition-colors duration-300"
+                    id="el-s7rsewa4"
+                    >Success Stories</a
+                  >
+                </li>
+                <li id="el-mc52dxm7">
+                  <a
+                    href="#faq"
+                    class="text-[#2596be] hover:text-white transition-colors duration-300"
+                    id="el-rca3nzyh"
+                    >FAQ</a
+                  >
+                </li>
+                <li id="el-career-link">
+                  <a
+                    href="/career"
+                    class="text-[#2596be] hover:text-white transition-colors duration-300"
+                    >Careers</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div id="el-u7by3b97">
+              <h4
+                class="text-lg font-semibold text-white mb-6"
+                id="el-4miz9auk"
+              >
+                Contact Us
+              </h4>
+              <ul class="space-y-4" id="el-kgbdz3xg">
+                <li class="flex items-center" id="el-b2h6v5c9">
+                  <i
+                    class="fas fa-phone-alt mr-3 text-[#2596be]"
+                    id="el-m0kos4sn"
+                  ></i>
+                  <a
+                    href="tel:+91123456789"
+                    class="text-[#2596be] hover:text-white transition-colors duration-300"
+                    id="el-2viqo9cw"
+                    >+91 12345 67890</a
+                  >
+                </li>
+                <li class="flex items-center" id="el-slg1tmpj">
+                  <i
+                    class="fas fa-envelope mr-3 text-[#2596be]"
+                    id="el-q4rxft5w"
+                  ></i>
+                  <a
+                    href="mailto:sales@uprestro.com"
+                    class="text-[#2596be] hover:text-white transition-colors duration-300"
+                    id="el-i5gidanh"
+                    >sales@uprestro.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div id="el-vppc13iw">
+              <h4
+                class="text-lg font-semibold text-white mb-6"
+                id="el-5hq92yrs"
+              >
+                Stay Updated
+              </h4>
+              <p class="text-gray-400 mb-4" id="el-y97p9jtj">
+                Subscribe to our newsletter for the latest updates and
+                restaurant management tips.
+              </p>
+              <form class="space-y-3" id="el-5duvr9dy">
+                <div id="el-klmnilfp">
+                  <input
+                    type="email"
+                    placeholder="Your email address"
+                    required=""
+                    class="w-full px-4 py-2 bg-gray-800 border border-[#2596be] rounded-md focus:outline-none focus:border-[#2596be] text-white"
+                    id="el-y4b13sq2"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  class="w-full px-4 py-2 bg-[#2596be] text-white rounded-md hover:bg-[#1d7596] transition duration-300"
+                  id="el-djkiam5r"
+                >
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Bottom Footer -->
+          <div class="py-6 border-t border-gray-800" id="el-uf3seko0">
+            <div
+              class="flex flex-col md:flex-row justify-between items-center"
+              id="el-41d1epny"
+            >
+              <p class="text-gray-400 text-sm" id="el-topml2gi">
+                © 2024 Uprestro. All rights reserved.
+              </p>
+              <div class="flex space-x-6 mt-4 md:mt-0" id="el-gv6voxiu">
+                <a
+                  href="#"
+                  class="text-[#2596be] hover:text-white text-sm transition-colors duration-300"
+                  id="el-xdcrwu1g"
+                  >Privacy Policy</a
+                >
+                <a
+                  href="#"
+                  class="text-[#2596be] hover:text-white text-sm transition-colors duration-300"
+                  id="el-tendptc0"
+                  >Terms of Service</a
+                >
+                <a
+                  href="#"
+                  class="text-[#2596be] hover:text-white text-sm transition-colors duration-300"
+                  id="el-1yw8gw1c"
+                  >Cookie Policy</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>

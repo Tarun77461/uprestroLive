@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uprestro POS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+    <!-- ElegentIcon CSS -->
+    <link rel="stylesheet" href="assets/css/elegant-icons.min.css" />
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <link rel="stylesheet" href="assets/css/slick-theme.css" />
+    <!-- SwiperJs CSS -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <!-- NiceSlelect CSS -->
+    <link rel="stylesheet" href="assets/css/nice-select.css" />
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <style>
+      .BookYourFreeDmo {
+        margin-top: 3rem;
+        p {
+          font-size: 18px;
+        }
+        a {
+          margin-top: 1rem;
+        }
+      }
+      .benefitsSection {
+        padding: 5rem;
+        background: linear-gradient(to bottom, var(--brand), var(--brandDark));
+
+        h2 {
+          color: white;
+        }
+
+        p {
+          color: white;
+        }
+        a {
+          margin-top: 0.5rem;
+          border: 2px solid white;
+          color: white;
+          font-size: 18px;
+          &:hover {
+            background-color: white;
+            color: var(--brand);
+          }
+        }
+
+        h4 {
+          font-size: 22px;
+          font-weight: 400;
+          color: white;
+          margin-top: 3rem;
+          margin-bottom: 1rem;
+        }
+
+        .leftSideBenifit,
+        .rightSideBenifitDiv {
+          display: flex;
+          flex-direction: column;
+
+          height: 100%;
+          width: 100%;
+          border-radius: 12px;
+          border: 1px solid #c3c0c01b;
+          padding: 2rem;
+          box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+            0 8px 10px -6px rgb(0 0 0 / 0.1);
+          background: linear-gradient(
+            to bottom,
+            var(--brand),
+            var(--brandDark)
+          );
+
+          h6 {
+            font-size: 36px;
+            color: white;
+          }
+
+          p {
+            font-size: 17px;
+          }
+        }
+
+        .data1,
+        .data2 {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+        }
+        .data2 {
+          margin-top: 2rem;
+        }
+      }
+      .rightSideBenifitDiv {
+        gap: 1.5rem;
+        h2 {
+          font-size: 18px;
+          color: white;
+        }
+
+        p {
+          margin-top: 0.5rem;
+          font-size: 16px;
+          color: white;
+        }
+      }
+
+      .benifiticon {
+        background-color: white;
+        border-radius: 50px;
+        height: fit-content;
+        padding: 6px 10px;
+      }
+      @media screen and (max-width: 768px) {
+        .benefitsSection {
+          padding: 2rem 1rem !important;
+        }
+        .leftSideBenifit {
+          padding: 2rem 1rem !important;
+        }
+        .data1,
+        .data2 {
+          justify-content: center !important;
+        }
+      }
+      @media screen and (max-width: 992px) {
+        .benefitsSection {
+          padding: 4rem 1rem !important;
+        }
+      }
+      @media screen and (max-width: 800px) {
+        .data1,
+        .data2 {
+          justify-content: center !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header-area">
+      <nav class="navbar navbar-expand-lg menu_three sticky-nav">
+        <div class="container-lg">
+          <a class="navbar-brand header_logo" href="index.html">
+            <img
+              style="width: 200px"
+              class="main_logo"
+              src="assets/images/uprestro/uprestro_logo.png"
+              alt="logo"
+            />
+          </a>
+          <button
+            class="navbar-toggler collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="menu_toggle">
+              <span class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+              <span class="hamburger-cross">
+                <span></span>
+                <span></span>
+              </span>
+            </span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarText"
+          >
+            <ul class="navbar-nav menu mx-auto">
+              <li class="nav-item active">
+                <a href="#" class="nav-link active">Features</a>
+              </li>
+              <li class="nav-item active">
+                <a href="#" class="nav-link">Pricing</a>
+              </li>
+
+              <li class="nav-item active">
+                <a href="#" class="nav-link">Integrations</a>
+              </li>
+
+              <li class="nav-item active">
+                <a href="#" class="nav-link">Testimonials</a>
+              </li>
+            </ul>
+            <div class="right-nav">
+              <a class="btn btn-red" href="signup.html">Get Started</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Banner Area -->
+      <section class="banner-area">
+        <div class="container">
+          <div class="row flex-column-reverse flex-md-row align-items-center">
+            <div class="col-md-6">
+              <div class="banner-left">
+                <h1>
+                  AI-Powered POS for
+                  <span>
+                    Restaurants
+                    <svg
+                      width="225"
+                      height="16"
+                      viewBox="0 0 225 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M224.931 15.1987C151.063 1.40293 47.4825 6.23252 4.92601 10.3718L0.241161 6.21004C91.4615 -6.66766 188.043 6.83677 224.931 15.1987Z"
+                        fill="#2596BE"
+                      />
+                    </svg>
+                  </span>
+                </h1>
+                <p class="banner-para">
+                  Simplify Operations, Delight Customers, Drive Revenue.
+                  Uprestro POS is your all-in-one solution for efficient
+                  restaurant management – lightning-fast, offline/online, and
+                  AI-driven insights.
+                </p>
+                <form class="form-group">
+                  <button
+                    type="submit"
+                    style="left: 0; right: auto"
+                    class="btn btn-red"
+                  >
+                    Book A Demo
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="banner-right">
+                <img
+                  class="wow fadeInRightBig"
+                  src="assets/images/uprestro/heroImg.png"
+                  alt="Uprestro"
+                  title="AI-Powered POS for Restaurants"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <img class="banner-shape-2" src="assets/images/shape/bg-shape-2.png" alt="Pricing Banner Shape"> -->
+      </section>
+      <!-- Banner Area -->
+
+      <!-- Services Area -->
+      <section class="billing-services-area pb-140">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 mb-50">
+              <h2
+                class="services-title wow fadeInDown text-center mb-10"
+                data-wow-delay="0.2s"
+              >
+                Powerful Features for Modern Restaurants
+              </h2>
+              <p class="text-center">
+                Everything you need to streamline operations and boost revenue
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-6 mb-20">
+              <div
+                class="services-item wow fadeInLeft h-100"
+                data-wow-delay="0.2s"
+              >
+                <img
+                  style="width: 50px"
+                  src="./assets/images/uprestro/recommendation.png"
+                  alt=""
+                />
+                <h3 class="service-item-title">AI-Driven Insights</h3>
+                <p class="service-item-text">
+                  Smart analytics and predictions to optimize your menu and
+                  operations. Reduce costs by 30% with AI recommendations.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-20">
+              <div
+                class="services-item wow fadeInLeft h-100"
+                data-wow-delay="0.2s"
+              >
+                <img
+                  style="width: 50px"
+                  src="./assets/images/uprestro/no-wifi.png"
+                />
+                <h3 class="service-item-title">Offline/Online Mode</h3>
+                <p class="service-item-text">
+                  Never miss a sale. Seamlessly switch between offline and
+                  online operations with automatic sync.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-20">
+              <div
+                class="services-item wow fadeInLeft h-100"
+                data-wow-delay="0.2s"
+              >
+                <img
+                  style="width: 50px"
+                  src="./assets/images/uprestro/dashboard.png"
+                  alt=""
+                />
+                <h3 class="service-item-title">Super Admin Dashboard</h3>
+                <p class="service-item-text">
+                  Complete control over multiple locations with real-time
+                  monitoring and advanced reporting.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-20">
+              <div
+                class="services-item wow fadeInLeft h-100"
+                data-wow-delay="0.2s"
+              >
+                <img
+                  style="width: 50px"
+                  src="./assets/images/uprestro/order-processed.png"
+                  alt=""
+                />
+                <h3 class="service-item-title">Fast Order Processing</h3>
+                <p class="service-item-text">
+                  Reduce order processing time by 40%. Handle rush hours with
+                  ease and improve customer satisfaction.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-20">
+              <div
+                class="services-item wow fadeInLeft h-100"
+                data-wow-delay="0.2s"
+              >
+                <img
+                  style="width: 50px"
+                  src="./assets/images/uprestro/management.png"
+                  alt=""
+                />
+                <h3 class="service-item-title">Inventory Management</h3>
+                <p class="service-item-text">
+                  Smart stock tracking and automated reordering. Reduce waste
+                  and never run out of essential items.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-20">
+              <div
+                class="services-item wow fadeInLeft h-100"
+                data-wow-delay="0.2s"
+              >
+                <img
+                  style="width: 50px"
+                  src="./assets/images/uprestro/competitor-analysis.png"
+                  alt=""
+                />
+                <h3 class="service-item-title">Customer Analytics</h3>
+                <p class="service-item-text">
+                  Understand your customers better with detailed insights and
+                  personalized marketing capabilities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Services Area -->
+
+      <!-- Process Area Two -->
+      <section class="process-area-2 overflow-hidden mb-100">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 mb-90">
+              <h2
+                class="heading-3 text-center mb-10 wow fadeInUp"
+                data-wow-delay="0.1s"
+              >
+                Getting Started is Simple
+              </h2>
+              <p class="text-center">
+                Set up your restaurant POS system in three easy steps
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <div class="process-item-2 wow fadeInLeft" data-wow-delay="0.1s">
+                <img
+                  class="line-1"
+                  src="./assets/images/process/shape11.svg"
+                  alt="Shape"
+                />
+                <img
+                  class="line-2"
+                  src="./assets/images/process/shape12.svg"
+                  alt="Shape"
+                />
+                <span class="item-number">1</span>
+                <h3 class="item-title">Sign Up</h3>
+                <p class="item-text">
+                  Complete our simple registration process and choose your plan.
+                  No credit card required for trial.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mt-md-0 mt-5">
+              <div class="process-item-2 wow fadeInLeft" data-wow-delay="0.3s">
+                <img
+                  class="line-3"
+                  src="./assets/images/process/shape13.svg"
+                  alt="Shape"
+                />
+                <span class="item-number">2</span>
+                <h3 class="item-title">Customize</h3>
+                <p class="item-text">
+                  Set up your menu, configure settings, and customize the system
+                  to match your restaurant's needs.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mt-lg-0 mt-5 mx-auto">
+              <div class="process-item-2 wow fadeInLeft" data-wow-delay="0.5s">
+                <img
+                  class="line-4"
+                  src="./assets/images/process/shape14.svg"
+                  alt="Shape"
+                />
+                <span class="item-number">3</span>
+                <h3 class="item-title">Start Selling</h3>
+                <p class="item-text">
+                  Go live with your new POS system and start managing orders,
+                  tracking inventory, and growing your business.
+                </p>
+              </div>
+            </div>
+            <div class="col-12">
+              <form class="form-group text-center" style="max-width: 100%">
+                <button
+                  type="submit"
+                  style="
+                    position: static;
+                    margin-right: 0.5rem;
+                    border-color: var(--brand);
+                    margin-top: 0;
+                  "
+                  class="btn btn-red"
+                >
+                  Book A Demo
+                </button>
+                <a href="" class="btn">Buy Plan</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Process Area Two -->
+      <!---cardss-->
+      <section
+        id="benefits"
+        class="benefitsSection process-area-2 overflow-hidden mb-100"
+      >
+        <div class="container-lg">
+          <div class="row">
+            <div class="col-12 mb-80">
+              <h2
+                class="heading-3 text-center mb-10 wow fadeInUp"
+                data-wow-delay="0.1s"
+              >
+                Why Choose Uprestro POS?
+              </h2>
+              <p class="text-center">
+                Transform your restaurant operations with proven results
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mt-3">
+              <div class="leftSideBenifit">
+                <div class="data1">
+                  <div class="d-flex flex-column align-items-center">
+                    <h6>40%</h6>
+                    <p>Faster Order Processing</p>
+                  </div>
+                  <div class="d-flex flex-column align-items-center">
+                    <h6>30%</h6>
+                    <p>Cost Reduction</p>
+                  </div>
+                </div>
+                <div class="data2">
+                  <div class="d-flex flex-column align-items-center">
+                    <h6>25%</h6>
+                    <p>Revenue Increase</p>
+                  </div>
+                  <div class="d-flex flex-column align-items-center">
+                    <h6>99.9%</h6>
+                    <p>Uptime Guarantee</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mt-3">
+              <div class="rightSideBenifitDiv">
+                <div class="d-flex gap-3">
+                  <div class="benifiticon"><i class="fas fa-cogs"></i></div>
+                  <div class="d-flex flex-column">
+                    <h2>Reliable Performance</h2>
+                    <p>
+                      Streamline operations with AI-powered automation and
+                      real-time insights
+                    </p>
+                  </div>
+                </div>
+                <div class="d-flex gap-3">
+                  <div class="benifiticon"><i class="fas fa-robot"></i></div>
+                  <div class="d-flex flex-column">
+                    <h2>Reliable Performance</h2>
+                    <p>
+                      Streamline operations with AI-powered automation and
+                      real-time insights
+                    </p>
+                  </div>
+                </div>
+                <div class="d-flex gap-3">
+                  <div class="benifiticon">
+                    <i class="fas fa-chart-line"></i>
+                  </div>
+                  <div class="d-flex flex-column">
+                    <h2>Reliable Performance</h2>
+                    <p>
+                      Streamline operations with AI-powered automation and
+                      real-time insights
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 BookYourFreeDmo">
+            <form class="form-group text-center" style="max-width: 100%">
+              <p>Ready to transform your restaurant?</p>
+              <a href="" class="btn">Book Your Free Demo</a>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--Scroll to top-->
+    <a href="#" class="scrollToTop">
+      <img src="assets/images/scroll.svg" alt="" />
+    </a>
+
+    <script src="assets/js/plugin/jquery-3.5.0.min.js"></script>
+    <script src="assets/js/plugin/popper.min.js"></script>
+    <script src="assets/js/plugin/bootstrap.min.js"></script>
+    <!-- TweenMax -->
+    <script src="assets/js/plugin/TweenMax.min.js"></script>
+    <!-- ScrollMagic -->
+    <script src="assets/js/plugin/ScrollMagic.js"></script>
+    <!-- animation.gsap -->
+    <script src="assets/js/plugin/animation.gsap.js"></script>
+    <!-- debug.addIndicators -->
+    <script src="assets/js/plugin/debug.addIndicators.min.js"></script>
+    <script src="assets/js/plugin/squareCountDownClock.js"></script>
+    <script src="assets/js/plugin/wow.min.js"></script>
+    <script src="assets/js/plugin/jquery.nice-select.min.js"></script>
+    <script src="assets/js/plugin/jquery.fancybox.min.js"></script>
+    <script src="assets/js/plugin/slick.min.js"></script>
+    <script src="assets/js/plugin/swiper-bundle.min.js"></script>
+    <script src="assets/js/plugin/jquery.waypoints.min.js"></script>
+    <script src="assets/js/plugin/jquery.counterup.min.js"></script>
+    <script src="assets/js/plugin/jquery.parallax-scroll.js"></script>
+    <script src="assets/js/plugin/jquery.paroller.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
