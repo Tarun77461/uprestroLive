@@ -21177,8 +21177,8 @@ Contact Page Two CSS
   .data2 {
     justify-content: center !important;
   }
-  .bookDbttn{
-    margin-bottom:1rem;
+  .bookDbttn {
+    margin-bottom: 1rem;
   }
 }
 @media screen and (max-width: 992px) {
@@ -21229,7 +21229,7 @@ Contact Page Two CSS
   padding: 1rem;
 }
 .submitFormBttn {
-  margin-top:1rem;
+  margin-top: 1rem;
   width: 50%;
 
   padding: 0.5rem 2rem;
@@ -21246,4 +21246,16 @@ Contact Page Two CSS
 
 .heroRighImgg {
   overflow: hidden;
+}
+.accordion-collapse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.accordion-collapse.show {
+  max-height: 500px;
+}
+.accordion-body p {
+  padding: 0rem 1rem;
 }
